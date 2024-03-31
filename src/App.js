@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
+
+import BoxChat from './components/box-chat/BoxChat';
+import ButtonGroup from './components/buttons/button-group/ButtonGroup';
+import ButtonIcon from './components/buttons/button-icon/ButtonIcon';
+import DefaultLayout from './layouts/default-layout/DefaultLayout';
 
 function App() {
+  const buttons = [
+    {
+      item: <BoxChat/>
+    },
+    {
+      item:<BoxChat/>
+    },
+    {
+      item: <BoxChat/>
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DefaultLayout/>
+     
     </div>
   );
 }
